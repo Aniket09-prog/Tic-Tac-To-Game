@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f0f2f5, #dfe7fd), url('path/to/your/image.jpg');
+    background-size: cover;
+    background-blend-mode: overlay;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.5s;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s;
+}
+
+.container:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.game-info {
+    margin-bottom: 2rem;
+}
+
+#status {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+button {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 0 auto;
+    width: 300px;
+    border: 3px solid rgb(243, 239, 239);
+    border-radius: 10px;
+}
+
+.cell {
+    background-color: #f8f9fa;
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cell:hover {
+    background-color: #e9ecef;
+    transform: scale(1.05);
+}
+
+.cell.x {
+    color: #ff6b6b;
+    animation: pop 0.3s ease-out;
+}
+
+.cell.o {
+    color: #4d96ff;
+    animation: pop 0.3s ease-out;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+} 
